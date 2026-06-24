@@ -1,2 +1,5 @@
 allow cameraserver data_system_camera_rus:dir { read open search };
 allow cameraserver data_system_camera_rus:file { read getattr setattr open };
+
+# cameraserver bumps the camera-app client RT priority (OOS grants; was permissive avc)
+allow cameraserver opluscamera_app:process setsched;
