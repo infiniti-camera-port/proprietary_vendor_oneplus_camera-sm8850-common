@@ -59,3 +59,26 @@ def blob_fixup_oppogallery_wallpaper_attach_intent(ctx, file, file_path, *args, 
         break
     if not patched:
         raise ValueError('OppoGallery2 wallpaper attach intent patch point not found')
+
+
+def blob_fixup_oppogallery_strip_component_safe(ctx, file, file_path, *args, tmp_dir=None, **kwargs):
+    # OplusPreTileDecodeService (and any sibling) is an exported service guarded by
+    # android:permission="oppo.permission.OPPO_COMPONENT_SAFE". That permission's definer,
+    # system_ext/framework/oplus-framework-res.apk, is not shipped, so the permission is
+    # undefined on-device: any bind is denied -> SecurityException. OplusCamera binds
+    # OplusPreTileDecodeService and dies FATAL on its camera.io thread. Strip only this one
+    # undefined gate; the components stay and other (on-device-defined) gates are untouched.
+    if tmp_dir is None:
+        return
+    manifest = Path(tmp_dir) / 'AndroidManifest.xml'
+    if not manifest.exists():
+        return
+    data = manifest.read_text(encoding='utf-8')
+    fixed, count = re.subn(
+        r'\s+android:permission="oppo\.permission\.OPPO_COMPONENT_SAFE"',
+        '',
+        data,
+    )
+    if count == 0:
+        raise ValueError('OppoGallery2 OPPO_COMPONENT_SAFE gate not found')
+    manifest.write_text(fixed, encoding='utf-8')
