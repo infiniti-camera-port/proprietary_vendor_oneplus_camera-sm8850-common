@@ -32,6 +32,7 @@ from apk_fixups_op15 import (
 from apk_fixups_camera_op15 import blob_fixup_opluscamera_component_safe_permission
 from apk_fixups_gallery_op15 import (
     blob_fixup_oppogallery_strip_component_safe,
+    blob_fixup_oppogallery_strip_search_indexables,
     blob_fixup_oppogallery_wallpaper_attach_intent,
 )
 
@@ -177,6 +178,7 @@ blob_fixups = {
         .call(blob_fixup_apktool_unpack_full)
         .call(blob_fixup_oppogallery_wallpaper_attach_intent)
         .call(blob_fixup_oppogallery_strip_component_safe)
+        .call(blob_fixup_oppogallery_strip_search_indexables)
         .apktool_pack()
         .stripzip(),
     'system_ext/etc/permissions/vendor-oplus-hardware-cryptoeng.xml': blob_fixup()

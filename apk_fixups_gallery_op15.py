@@ -82,3 +82,28 @@ def blob_fixup_oppogallery_strip_component_safe(ctx, file, file_path, *args, tmp
     if count == 0:
         raise ValueError('OppoGallery2 OPPO_COMPONENT_SAFE gate not found')
     manifest.write_text(fixed, encoding='utf-8')
+
+
+def blob_fixup_oppogallery_strip_search_indexables(ctx, file, file_path, *args, tmp_dir=None, **kwargs):
+    # OppoGallery2 exposes GallerySearchIndexablesProvider (a SearchIndexablesProvider) whose
+    # preference XML uses a fully-qualified androidx.preference.PreferenceScreen root. That
+    # violates the AOSP SearchIndexablesProvider contract (bare <PreferenceScreen> expected), so
+    # com.android.settings.intelligence throws in IndexDataConverter and crashes on every indexing
+    # pass (the "Settings suggestions" crash). Settings-search contribution is an OEM integration a
+    # LineageOS/crDroid ROM does not need; drop the provider at its source rather than fork the
+    # platform indexer. Removes the whole <provider> element for that class.
+    if tmp_dir is None:
+        return
+    manifest = Path(tmp_dir) / 'AndroidManifest.xml'
+    if not manifest.exists():
+        return
+    data = manifest.read_text(encoding='utf-8')
+    fixed, count = re.subn(
+        r'\s*<provider\b[^>]*?android:name="com\.oplus\.gallery\.settingpage\.GallerySearchIndexablesProvider".*?</provider>',
+        '',
+        data,
+        flags=re.DOTALL,
+    )
+    if count == 0:
+        raise ValueError('OppoGallery2 GallerySearchIndexablesProvider not found')
+    manifest.write_text(fixed, encoding='utf-8')
