@@ -28,6 +28,7 @@ from apk_fixups_op15 import (
     blob_fixup_apktool_unpack_full,
     blob_fixup_cryptoeng_manifest,
     blob_fixup_cryptoeng_permissions_xml,
+    blob_fixup_inject_compat_uses_library,
 )
 from apk_fixups_camera_op15 import blob_fixup_opluscamera_component_safe_permission
 from apk_fixups_gallery_op15 import (
@@ -172,6 +173,7 @@ blob_fixups = {
         .call(blob_fixup_opluscamera_component_safe_permission)
         .call(blob_fixup_opluscamera_font)
         .call(blob_fixup_opluscamera_strip_oem_perms)
+        .call(blob_fixup_inject_compat_uses_library)
         .apktool_pack()
         .stripzip(),
     'system_ext/priv-app/OppoGallery2/OppoGallery2.apk': blob_fixup()
@@ -179,6 +181,7 @@ blob_fixups = {
         .call(blob_fixup_oppogallery_wallpaper_attach_intent)
         .call(blob_fixup_oppogallery_strip_component_safe)
         .call(blob_fixup_oppogallery_strip_search_indexables)
+        .call(blob_fixup_inject_compat_uses_library)
         .apktool_pack()
         .stripzip(),
     'system_ext/etc/permissions/vendor-oplus-hardware-cryptoeng.xml': blob_fixup()
@@ -205,6 +208,52 @@ module = ExtractUtilsModule(
     namespace_imports=namespace_imports,
 )
 
+def inject_optional_uses_lib_android_bp(bp_path, module_names, lib='com.oplus.compat'):
+    # extract-utils has no uses_libs support, so post-process the generated
+    # Android.bp: insert optional_uses_libs on the rebaked OEM android_app_import
+    # blocks that now declare the com.oplus.compat <uses-library> (paired with
+    # blob_fixup_inject_compat_uses_library, gated by soong's uses-library check).
+    # Brace-aware + idempotent, so every regen re-applies it cleanly.
+    text = bp_path.read_text(encoding='utf-8')
+    insert = f'    optional_uses_libs: ["{lib}"],\n'
+    changed = False
+    for name in module_names:
+        pos = 0
+        while True:
+            start = text.find('android_app_import {', pos)
+            if start == -1:
+                break
+            depth = 0
+            end = None
+            idx = text.find('{', start)
+            while idx < len(text):
+                char = text[idx]
+                if char == '{':
+                    depth += 1
+                elif char == '}':
+                    depth -= 1
+                    if depth == 0:
+                        end = idx
+                        break
+                idx += 1
+            if end is None:
+                break
+            block = text[start:end + 1]
+            if re.search(r'\bname:\s*"' + re.escape(name) + r'"', block):
+                if 'optional_uses_libs' not in block:
+                    text = text[:end] + insert + text[end:]
+                    changed = True
+                break
+            pos = end + 1
+    if changed:
+        bp_path.write_text(text, encoding='utf-8')
+    return changed
+
+
 if __name__ == '__main__':
     utils = ExtractUtils.device(module)
     utils.run()
+    inject_optional_uses_lib_android_bp(
+        Path(__file__).resolve().parent / 'camera' / 'Android.bp',
+        ('OplusCamera', 'OppoGallery2'),
+    )
