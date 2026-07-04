@@ -90,3 +90,10 @@ include vendor/oneplus/camera-sm8850-common/sepolicy/SEPolicy.mk
 
 # Inherit from camera-vendor.mk
 $(call inherit-product, vendor/oneplus/camera-sm8850-common/camera/camera-vendor.mk)
+
+# SoC-common camera props (order-only across the sm8850 family; absorbed from the
+# task-8 device/oneplus/sm8850-common-camera scaffold that rearchv2 supersedes).
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.camera.enableCamera1MaxZsl=1 \
+    ro.camera.notify_nfc=1 \
+    ro.camerax.extensions.enabled=true
