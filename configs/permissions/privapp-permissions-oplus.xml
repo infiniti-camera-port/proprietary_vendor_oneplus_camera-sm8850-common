@@ -2,11 +2,13 @@
 <permissions>
      <!-- OPLUS camera unit sdk adapter -->
      <library name = "com.oplus.camera.unit.sdk.adapter"
-        file = "/system_ext/framework/com.oplus.camera.unit.sdk.adapter.jar" />
+        file = "/system_ext/framework/com.oplus.camera.unit.sdk.adapter.jar"
+        dependency = "com.oplus.compat" />
 
      <!-- OPLUS camera unit sdk -->
      <library name = "com.oplus.camera.unit.sdk"
-        file = "/system_ext/framework/com.oplus.camera.unit.sdk.jar" />
+        file = "/system_ext/framework/com.oplus.camera.unit.sdk.jar"
+        dependency = "com.oplus.compat" />
 
      <!-- OPLUS appplatform -->
      <privapp-permissions package="com.oplus.appplatform">
