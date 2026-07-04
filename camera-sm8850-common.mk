@@ -101,3 +101,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 # oplus-fwk -> com.oplus.compat migration (O3 Phase-B1): the port-owned OEM-compat
 # uses-library replaces the retired oplus-fwk boot jar.
 $(call inherit-product, vendor/oneplus/camera-sm8850-common/compat/oplus-compat.mk)
+
+# OEM signature-permission definer (O3 Phase-B1): platform-signed, code-less app
+# that defines the oplus/oppo signature perms whose OOS definer
+# (oplus-framework-res.apk) is not shipped, so the ported OEM apps can hold them.
+$(call inherit-product, vendor/oneplus/camera-sm8850-common/definer/oplus-definer.mk)
