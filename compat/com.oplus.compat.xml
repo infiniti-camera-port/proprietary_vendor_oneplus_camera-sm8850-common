@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2024 The LineageOS Project
+  ~
+  ~ SPDX-License-Identifier: Apache-2.0
+-->
+<permissions>
+    <library name="com.oplus.compat"
+             file="/system_ext/framework/com.oplus.compat.jar" />
+</permissions>

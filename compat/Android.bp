@@ -1,0 +1,47 @@
+//
+// Copyright (C) 2024 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// Compile-only companion for com.oplus.widget.OplusItem. The real OplusItem
+// (with its inner $Builder/$a and instance fields) is defined by OppoGallery2.apk
+// itself; OplusGridView.setAppInfo(OplusItem[][]) only needs it on the compile
+// classpath to emit the [[Lcom/oplus/widget/OplusItem; descriptor. Shipping the
+// placeholder in com.oplus.compat.jar would shadow the gallery's own OplusItem
+// and break its field access (NoSuchFieldError), so this is a non-installable
+// "libs" (provided-scope) dependency that is NOT merged into com.oplus.compat.jar.
+// Named distinctly from oplus-fwk's identical companion so both Android.bp files
+// can coexist without a duplicate Soong module name.
+java_library {
+    name: "com.oplus.compat-oplusitem-compileonly",
+    installable: false,
+
+    srcs: [
+        "compileonly/com/oplus/widget/OplusItem.java",
+    ],
+}
+
+// com.oplus.compat: the port-owned OEM-compat surface, published as a system_ext
+// <uses-library>. Replaces the retired oplus-fwk boot jar (boot-jar ->
+// uses-library migration, O3 Phase-B1). Consumed by the rebaked OEM APKs
+// (OplusCamera / OppoGallery2 / AIUnit) and their OEM sdk jars via
+// <uses-library android:name="com.oplus.compat" android:required="false"/>.
+// No sdk_version -> platform build, matching oplus-fwk, so it links the
+// platform hidden/private APIs these classes reference.
+java_library {
+    name: "com.oplus.compat",
+    installable: true,
+    system_ext_specific: true,
+
+    srcs: [
+        "src/**/*.aidl",
+        "src/**/*.java",
+    ],
+
+    libs: [
+        "com.oplus.compat-oplusitem-compileonly",
+    ],
+
+    provides_uses_lib: "com.oplus.compat",
+}

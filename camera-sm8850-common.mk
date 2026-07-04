@@ -97,3 +97,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.camera.enableCamera1MaxZsl=1 \
     ro.camera.notify_nfc=1 \
     ro.camerax.extensions.enabled=true
+
+# oplus-fwk -> com.oplus.compat migration (O3 Phase-B1): the port-owned OEM-compat
+# uses-library replaces the retired oplus-fwk boot jar.
+$(call inherit-product, vendor/oneplus/camera-sm8850-common/compat/oplus-compat.mk)
