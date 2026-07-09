@@ -39,6 +39,30 @@ PRODUCT_COPY_FILES += \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/firmware/secure_ta/fidotap.b07:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/fidotap.b07 \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/firmware/secure_ta/fidotap.b08:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/fidotap.b08 \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/firmware/secure_ta/fidotap.mdt:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/fidotap.mdt \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AIMemory/lib/arm64/libaiunit_sdk_core.so:$(TARGET_COPY_OUT_PRODUCT)/app/AIMemory/lib/arm64/libaiunit_sdk_core.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AIMemory/lib/arm64/libnoise.so:$(TARGET_COPY_OUT_PRODUCT)/app/AIMemory/lib/arm64/libnoise.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AIMemory/lib/arm64/libopluslog.so:$(TARGET_COPY_OUT_PRODUCT)/app/AIMemory/lib/arm64/libopluslog.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AIMemory/lib/arm64/libscan_engine_decode.so:$(TARGET_COPY_OUT_PRODUCT)/app/AIMemory/lib/arm64/libscan_engine_decode.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AIMemory/lib/arm64/libscan_engine_detect.so:$(TARGET_COPY_OUT_PRODUCT)/app/AIMemory/lib/arm64/libscan_engine_detect.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AIMemory/lib/arm64/libtensorflowlite.so:$(TARGET_COPY_OUT_PRODUCT)/app/AIMemory/lib/arm64/libtensorflowlite.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AIMemory/lib/arm64/libwb_tables_549543368749780587_1.so:$(TARGET_COPY_OUT_PRODUCT)/app/AIMemory/lib/arm64/libwb_tables_549543368749780587_1.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AIMemory/lib/arm64/libwbkit-seckit3.so:$(TARGET_COPY_OUT_PRODUCT)/app/AIMemory/lib/arm64/libwbkit-seckit3.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AONService/lib/arm64/libNoTopK.so:$(TARGET_COPY_OUT_PRODUCT)/app/AONService/lib/arm64/libNoTopK.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AONService/lib/arm64/libPOSTPROCESS.so:$(TARGET_COPY_OUT_PRODUCT)/app/AONService/lib/arm64/libPOSTPROCESS.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AONService/lib/arm64/libROTATE90PAD.so:$(TARGET_COPY_OUT_PRODUCT)/app/AONService/lib/arm64/libROTATE90PAD.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AONService/lib/arm64/libaiboost_jni.so:$(TARGET_COPY_OUT_PRODUCT)/app/AONService/lib/arm64/libaiboost_jni.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AONService/lib/arm64/libbitmapUtil.so:$(TARGET_COPY_OUT_PRODUCT)/app/AONService/lib/arm64/libbitmapUtil.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AONService/lib/arm64/libfde.so:$(TARGET_COPY_OUT_PRODUCT)/app/AONService/lib/arm64/libfde.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AONService/lib/arm64/libmemoryhelper.so:$(TARGET_COPY_OUT_PRODUCT)/app/AONService/lib/arm64/libmemoryhelper.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libaiunit_framework.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libaiunit_framework.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libaiunit_framework_jni.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libaiunit_framework_jni.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libaiunit_sdk_core.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libaiunit_sdk_core.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libc++.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libc++.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libc++_shared.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libc++_shared.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libcore_tokenizers.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libcore_tokenizers.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libdatastore_shared_counter.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libdatastore_shared_counter.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libdmabufheap.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libdmabufheap.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libopencv_java4.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libopencv_java4.so \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/system_ext/etc/default-permissions/oplus_camera_default_grant_permissions_list.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default-permissions/oplus_camera_default_grant_permissions_list.xml \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/system_ext/etc/permissions/vendor-oplus-hardware-cryptoeng.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor-oplus-hardware-cryptoeng.xml
 
@@ -105,8 +129,13 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.cryptoeng@1.0_odm \
     vendor.oplus.hardware.fido.fido2ca-V1-ndk \
     vendor.oplus.hardware.fido.fidoca-V1-ndk \
+    AIMemory \
+    AONService \
+    RomUpdate \
+    AIUnit \
     OplusCamera \
     OppoGallery2 \
+    StdID \
     com.oplus.camera.unit.sdk.adapter \
     com.oplus.camera.unit.sdk \
     vendor.oplus.hardware.cryptoeng-V1-java \
