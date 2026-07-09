@@ -28,6 +28,7 @@ PRODUCT_PACKAGES += \
     libFileExtender-jni \
     libHdrTransform-platform-jni \
     libHeifEncoderWrapper \
+    libHeifWinBufExchg-jni \
     libNativeWinBuffExchange \
     libOplusBlurPreviewJNI \
     libOplusStringJNI-extension.oplus \

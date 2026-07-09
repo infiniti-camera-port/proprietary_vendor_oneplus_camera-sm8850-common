@@ -548,6 +548,39 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libHeifWinBufExchg-jni",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libHeifWinBufExchg-jni.so",
+            ],
+            shared_libs: [
+                "libHeifEncoderWrapper",
+                "libNativeWinBuffExchange",
+                "liblog",
+                "libandroid",
+                "libjnigraphics",
+                "libGLESv2",
+                "libEGL",
+                "libnativewindow",
+                "libz",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libNativeWinBuffExchange",
     owner: "oneplus",
     strip: {
