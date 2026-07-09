@@ -1474,6 +1474,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libAncHumanSegFigureFusion",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libAncHumanSegFigureFusion.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libz",
+                "libGLESv3",
+                "libEGL",
+                "libnativewindow",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libOplusSecurity",
     owner: "oneplus",
     strip: {
@@ -1860,6 +1888,32 @@ cc_prebuilt_binary {
     },
     prefer: true,
     relative_install_path: "hw",
+    device_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "occe_create",
+    owner: "oneplus",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/bin/occe_create",
+            ],
+            shared_libs: [
+                "liblog",
+                "libGLESv3",
+                "libEGL",
+                "libdl",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
     device_specific: true,
 }
 

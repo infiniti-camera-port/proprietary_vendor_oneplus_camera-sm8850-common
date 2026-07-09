@@ -6,6 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     proprietary/vendor/oneplus/camera-sm8850-common
 
 PRODUCT_COPY_FILES += \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/init/occe_create.rc:$(TARGET_COPY_OUT_ODM)/etc/init/occe_create.rc \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/init/vendor.oplus.hardware.fido.fido2ca@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.fido.fido2ca@1.0-service.rc \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/init/vendor.oplus.hardware.fido.fidoca@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.fido.fidoca@1.0-service.rc \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/permissions/vendor-oplus-hardware-cryptoeng.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/vendor-oplus-hardware-cryptoeng.xml \
@@ -120,6 +121,7 @@ PRODUCT_PACKAGES += \
     libvr_amb_engine \
     vendor.oplus.hardware.cryptoeng-V1-ndk \
     vendor.oplus.hardware.cryptoeng@1.0 \
+    libAncHumanSegFigureFusion \
     libOplusSecurity \
     lib_cryptoeng_api \
     libfido2_factory \
@@ -145,4 +147,5 @@ PRODUCT_PACKAGES += \
     manifest_oplus_fido2.xml \
     vendor.oplus.hardware.cryptoeng@1.0-service \
     vendor.oplus.hardware.fido.fido2ca@1.0-service \
-    vendor.oplus.hardware.fido.fidoca@1.0-service
+    vendor.oplus.hardware.fido.fidoca@1.0-service \
+    occe_create
