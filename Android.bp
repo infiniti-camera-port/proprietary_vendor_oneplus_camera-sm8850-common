@@ -2072,8 +2072,7 @@ android_app_import {
     name: "AONService",
     owner: "oneplus",
     apk: "proprietary/product/app/AONService/AONService.apk",
-    preprocessed: true,
-    presigned: true,
+    certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
@@ -2096,8 +2095,7 @@ android_app_import {
     name: "AIUnit",
     owner: "oneplus",
     apk: "proprietary/product/priv-app/AIUnit/AIUnit.apk",
-    preprocessed: true,
-    presigned: true,
+    certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
