@@ -142,6 +142,7 @@ PRODUCT_PACKAGES += \
     liblivephoto.frc.jni \
     libmpbase_system_ext \
     liboplus-uah-client_system_ext \
+    liboplus_cfbt \
     liboplusheifwriter \
     liboplushwui_jni \
     libortc_so.oplus \
