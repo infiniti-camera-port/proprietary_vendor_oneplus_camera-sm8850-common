@@ -141,9 +141,14 @@ PRODUCT_PACKAGES += \
     libjnistblur_api \
     liblivephoto.frc.jni \
     libmpbase_system_ext \
+    libhwuiextimpl \
+    libjpegdecoder_ext \
+    libjpegencoder_ext \
     liboplus-uah-client_system_ext \
+    liboplus_10bitHeif \
     liboplus_cfbt \
     liboplusheifwriter \
+    libskjpegencoderextimpl \
     liboplushwui_jni \
     libortc_so.oplus \
     libsatellite_audio_jni.oplus \
