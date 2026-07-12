@@ -95,6 +95,7 @@ PRODUCT_COPY_FILES += \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_transport_ppe.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_transport_ppe.json
 
 PRODUCT_PACKAGES += \
+    liboplusmmdebug \
     vendor.oplus.hardware.cameraextension@1.0 \
     libpenguin \
     libAPSClient-alog-jni \
@@ -129,6 +130,7 @@ PRODUCT_PACKAGES += \
     libapssuspend-jni.oplus \
     libarcsoft_panorama_burstcapture \
     libarcsoft_wideselfie \
+    libatlasservice \
     libbinauralrenderer_wrapper.qti \
     libbsproxy \
     libcsextimpl \
@@ -136,6 +138,8 @@ PRODUCT_PACKAGES += \
     libhoaeffects.qti \
     libhoaeffects_csim \
     libhwuiextimpl \
+    libiatlasservice \
+    libimmlistservice \
     libjni_burstpmk \
     libjni_wideselfie \
     libjnisingleblur_api \
@@ -143,9 +147,15 @@ PRODUCT_PACKAGES += \
     libjpegdecoder_ext \
     libjpegencoder_ext \
     liblivephoto.frc.jni \
+    libmmlistparser \
     libmpbase_system_ext \
+    libolc \
     liboplus-uah-client_system_ext \
+    liboplusHeifDecoderImpl \
     liboplus_10bitHeif \
+    liboplus_imageprocessing \
+    liboplus_multimedia_kernel_event \
+    libopluscfgpolicy \
     liboplusheifwriter \
     liboplushwui_jni \
     libortc_so.oplus \
