@@ -135,25 +135,24 @@ PRODUCT_PACKAGES += \
     libextendfile_system_ext \
     libhoaeffects.qti \
     libhoaeffects_csim \
+    libhwuiextimpl \
     libjni_burstpmk \
     libjni_wideselfie \
     libjnisingleblur_api \
     libjnistblur_api \
-    liblivephoto.frc.jni \
-    libmpbase_system_ext \
-    libhwuiextimpl \
     libjpegdecoder_ext \
     libjpegencoder_ext \
+    liblivephoto.frc.jni \
+    libmpbase_system_ext \
     liboplus-uah-client_system_ext \
     liboplus_10bitHeif \
-    liboplus_cfbt \
     liboplusheifwriter \
-    libskjpegencoderextimpl \
     liboplushwui_jni \
     libortc_so.oplus \
     libsatellite_audio_jni.oplus \
     libsingle_camera_bokeh2_native \
     libsingle_camera_bokeh_native \
+    libskjpegencoderextimpl \
     libsoundtouch.oplus \
     libsoundtouch_jni.oplus \
     libst_mobile \
@@ -174,6 +173,7 @@ PRODUCT_PACKAGES += \
     camera.oemlayer.v2 \
     libAncHumanSegFigureFusion \
     libOplusSecurity \
+    liboplus_cfbt \
     ExtensionsService \
     AIMemory \
     AONService \
