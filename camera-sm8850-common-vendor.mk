@@ -153,11 +153,14 @@ PRODUCT_PACKAGES += \
     liboplus-uah-client_system_ext \
     liboplusHeifDecoderImpl \
     liboplus_10bitHeif \
+    liboplus_heifconverter \
     liboplus_imageprocessing \
     liboplus_multimedia_kernel_event \
+    liboplusavenhancements \
     libopluscfgpolicy \
     liboplusheifwriter \
     liboplushwui_jni \
+    liboplussfplugin_ccodec \
     libortc_so.oplus \
     libsatellite_audio_jni.oplus \
     libsingle_camera_bokeh2_native \
