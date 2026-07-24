@@ -6,6 +6,8 @@ PRODUCT_SOONG_NAMESPACES += \
     proprietary/vendor/oneplus/camera-sm8850-common
 
 PRODUCT_COPY_FILES += \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/camera/license_release_fdc.lic:$(TARGET_COPY_OUT_ODM)/etc/camera/license_release_fdc.lic \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/camera/livephoto_coverenhancer/models/license_release_gallery.lic:$(TARGET_COPY_OUT_ODM)/etc/camera/livephoto_coverenhancer/models/license_release_gallery.lic \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/init/occe_create.rc:$(TARGET_COPY_OUT_ODM)/etc/init/occe_create.rc \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/init/vendor.oplus.hardware.fido.fido2ca@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.fido.fido2ca@1.0-service.rc \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/init/vendor.oplus.hardware.fido.fidoca@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.fido.fidoca@1.0-service.rc \
@@ -55,6 +57,8 @@ PRODUCT_COPY_FILES += \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AONService/lib/arm64/libbitmapUtil.so:$(TARGET_COPY_OUT_PRODUCT)/app/AONService/lib/arm64/libbitmapUtil.so \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AONService/lib/arm64/libfde.so:$(TARGET_COPY_OUT_PRODUCT)/app/AONService/lib/arm64/libfde.so \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/app/AONService/lib/arm64/libmemoryhelper.so:$(TARGET_COPY_OUT_PRODUCT)/app/AONService/lib/arm64/libmemoryhelper.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/etc/camera/cdr_aging_set.json:$(TARGET_COPY_OUT_PRODUCT)/etc/camera/cdr_aging_set.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/etc/camera/engineer_camera_config.json:$(TARGET_COPY_OUT_PRODUCT)/etc/camera/engineer_camera_config.json \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libaiunit_framework.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libaiunit_framework.so \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libaiunit_framework_jni.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libaiunit_framework_jni.so \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libaiunit_sdk_core.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libaiunit_sdk_core.so \
@@ -64,11 +68,35 @@ PRODUCT_COPY_FILES += \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libdatastore_shared_counter.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libdatastore_shared_counter.so \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libdmabufheap.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libdmabufheap.so \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/product/priv-app/AIUnit/lib/arm64/libopencv_java4.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AIUnit/lib/arm64/libopencv_java4.so \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/system/etc/permissions/privapp-permissions-oplus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-oplus.xml \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/system_ext/etc/default-permissions/oplus_camera_default_grant_permissions_list.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default-permissions/oplus_camera_default_grant_permissions_list.xml \
-    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/system_ext/etc/permissions/vendor-oplus-hardware-cryptoeng.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor-oplus-hardware-cryptoeng.xml
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/system_ext/etc/permissions/vendor-oplus-hardware-cryptoeng.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor-oplus-hardware-cryptoeng.xml \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/chre_dynamic_sensors.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/chre_dynamic_sensors.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_amd.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_amd.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_aont.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_aont.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_cm.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_cm.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_dae.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_dae.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_device_orient.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_device_orient.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_diag_filter.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_diag_filter.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_direct_channel.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_direct_channel.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_distance_bound.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_distance_bound.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_dpc.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_dpc.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_flight_md.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_flight_md.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_fmv.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_fmv.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_gyro_cal.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_gyro_cal.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_mag_cal.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_mag_cal.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_offbody_detect_phone.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_offbody_detect_phone.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_pedometer.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_pedometer.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_rmd.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_rmd.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_rotv.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_rotv.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_smd.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_smd.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_tilt.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_tilt.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_tilt_to_wake.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_tilt_to_wake.json \
+    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/vendor/etc/sensors/config/sns_transport_ppe.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_transport_ppe.json
 
 PRODUCT_PACKAGES += \
     liboplusmmdebug \
+    vendor.oplus.hardware.cameraextension@1.0 \
     libpenguin \
     libAPSClient-alog-jni \
     libAPSClient-cmd-jni-extension.oplus \
@@ -81,6 +109,7 @@ PRODUCT_PACKAGES += \
     libAncHumanSegFigureFusion-jni \
     libAncHumanVideo-jni \
     libApsFaceBeautyPreviewProductJni \
+    libApsSuperEISPreviewJni \
     libAvatarEngineRender \
     libAvatarEngineRenderNative \
     libCombineLut \
@@ -89,6 +118,7 @@ PRODUCT_PACKAGES += \
     libHdrTransform-platform-jni \
     libHeifEncoderWrapper \
     libHeifWinBufExchg-jni \
+    libMsEffectSdk \
     libNativeWinBuffExchange \
     libOplusBlurPreviewJNI \
     libOplusStringJNI-extension.oplus \
@@ -102,6 +132,8 @@ PRODUCT_PACKAGES += \
     libarcsoft_wideselfie \
     libatlasservice \
     libbinauralrenderer_wrapper.qti \
+    libbsproxy \
+    libcsextimpl \
     libextendfile_system_ext \
     libhoaeffects.qti \
     libhoaeffects_csim \
@@ -114,16 +146,21 @@ PRODUCT_PACKAGES += \
     libjnistblur_api \
     libjpegdecoder_ext \
     libjpegencoder_ext \
+    liblivephoto.frc.jni \
     libmmlistparser \
     libmpbase_system_ext \
     libolc \
+    liboplus-uah-client_system_ext \
     liboplusHeifDecoderImpl \
     liboplus_10bitHeif \
     liboplus_heifconverter \
     liboplus_imageprocessing \
     liboplus_multimedia_kernel_event \
+    liboplusavenhancements \
     libopluscfgpolicy \
     liboplusheifwriter \
+    liboplushwui_jni \
+    liboplussfplugin_ccodec \
     libortc_so.oplus \
     libsatellite_audio_jni.oplus \
     libsingle_camera_bokeh2_native \
@@ -135,23 +172,27 @@ PRODUCT_PACKAGES += \
     libst_sticker_jni \
     libsuperNight.oplus \
     libvr_amb_engine \
+    vendor.oplus.hardware.cameraMDM@1.0 \
     vendor.oplus.hardware.cryptoeng-V1-ndk \
     vendor.oplus.hardware.cryptoeng@1.0 \
-    libAncHumanSegFigureFusion \
-    libOplusSecurity \
     lib_cryptoeng_api \
     libfido2_factory \
     libfido_factory \
-    liboplus_cfbt \
     libqsee_keybox_ca \
     vendor.oplus.hardware.cryptoeng-V1-ndk_odm \
     vendor.oplus.hardware.cryptoeng@1.0_odm \
     vendor.oplus.hardware.fido.fido2ca-V1-ndk \
     vendor.oplus.hardware.fido.fidoca-V1-ndk \
+    camera.oemlayer.v2 \
+    libAncHumanSegFigureFusion \
+    libOplusSecurity \
+    liboplus_cfbt \
+    ExtensionsService \
     AIMemory \
     AONService \
     RomUpdate \
     AIUnit \
+    OplusAppPlatform \
     OplusCamera \
     OppoGallery2 \
     StdID \
