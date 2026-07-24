@@ -68,6 +68,7 @@ PRODUCT_COPY_FILES += \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/system_ext/etc/permissions/vendor-oplus-hardware-cryptoeng.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor-oplus-hardware-cryptoeng.xml
 
 PRODUCT_PACKAGES += \
+    liboplusmmdebug \
     libpenguin \
     libAPSClient-alog-jni \
     libAPSClient-cmd-jni-extension.oplus \
@@ -99,20 +100,35 @@ PRODUCT_PACKAGES += \
     libapssuspend-jni.oplus \
     libarcsoft_panorama_burstcapture \
     libarcsoft_wideselfie \
+    libatlasservice \
     libbinauralrenderer_wrapper.qti \
     libextendfile_system_ext \
     libhoaeffects.qti \
     libhoaeffects_csim \
+    libhwuiextimpl \
+    libiatlasservice \
+    libimmlistservice \
     libjni_burstpmk \
     libjni_wideselfie \
     libjnisingleblur_api \
     libjnistblur_api \
+    libjpegdecoder_ext \
+    libjpegencoder_ext \
+    libmmlistparser \
     libmpbase_system_ext \
+    libolc \
+    liboplusHeifDecoderImpl \
+    liboplus_10bitHeif \
+    liboplus_heifconverter \
+    liboplus_imageprocessing \
+    liboplus_multimedia_kernel_event \
+    libopluscfgpolicy \
     liboplusheifwriter \
     libortc_so.oplus \
     libsatellite_audio_jni.oplus \
     libsingle_camera_bokeh2_native \
     libsingle_camera_bokeh_native \
+    libskjpegencoderextimpl \
     libsoundtouch.oplus \
     libsoundtouch_jni.oplus \
     libst_mobile \
@@ -126,6 +142,7 @@ PRODUCT_PACKAGES += \
     lib_cryptoeng_api \
     libfido2_factory \
     libfido_factory \
+    liboplus_cfbt \
     libqsee_keybox_ca \
     vendor.oplus.hardware.cryptoeng-V1-ndk_odm \
     vendor.oplus.hardware.cryptoeng@1.0_odm \
