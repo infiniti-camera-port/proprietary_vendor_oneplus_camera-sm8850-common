@@ -1571,7 +1571,6 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libbinder_ndk",
-                "libbinder",
                 "libc++",
                 "libc",
                 "libm",

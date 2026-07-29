@@ -6,8 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     proprietary/vendor/oneplus/camera-sm8850-common
 
 PRODUCT_COPY_FILES += \
-    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/camera/license_release_fdc.lic:$(TARGET_COPY_OUT_ODM)/etc/camera/license_release_fdc.lic \
-    proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/camera/livephoto_coverenhancer/models/license_release_gallery.lic:$(TARGET_COPY_OUT_ODM)/etc/camera/livephoto_coverenhancer/models/license_release_gallery.lic \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/init/occe_create.rc:$(TARGET_COPY_OUT_ODM)/etc/init/occe_create.rc \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/init/vendor.oplus.hardware.fido.fido2ca@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.fido.fido2ca@1.0-service.rc \
     proprietary/vendor/oneplus/camera-sm8850-common/proprietary/odm/etc/init/vendor.oplus.hardware.fido.fidoca@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.fido.fidoca@1.0-service.rc \
