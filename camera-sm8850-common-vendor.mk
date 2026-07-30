@@ -174,11 +174,6 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.cameraMDM@1.0 \
     vendor.oplus.hardware.cryptoeng-V1-ndk \
     vendor.oplus.hardware.cryptoeng@1.0 \
-    camera.oemlayer.adapter \
-    camera.oemlayer.healthmonitor \
-    camera.oemlayer.logger \
-    camera.oemlayer.uilayer \
-    camera.oemlayer.v2 \
     libAncHumanSegFigureFusion \
     libOplusSecurity \
     lib_cryptoeng_api \
