@@ -174,18 +174,18 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.cameraMDM@1.0 \
     vendor.oplus.hardware.cryptoeng-V1-ndk \
     vendor.oplus.hardware.cryptoeng@1.0 \
+    camera.oemlayer.v2 \
+    libAncHumanSegFigureFusion \
+    libOplusSecurity \
     lib_cryptoeng_api \
     libfido2_factory \
     libfido_factory \
+    liboplus_cfbt \
     libqsee_keybox_ca \
     vendor.oplus.hardware.cryptoeng-V1-ndk_odm \
     vendor.oplus.hardware.cryptoeng@1.0_odm \
     vendor.oplus.hardware.fido.fido2ca-V1-ndk \
     vendor.oplus.hardware.fido.fidoca-V1-ndk \
-    camera.oemlayer.v2 \
-    libAncHumanSegFigureFusion \
-    libOplusSecurity \
-    liboplus_cfbt \
     ExtensionsService \
     AIMemory \
     AONService \
