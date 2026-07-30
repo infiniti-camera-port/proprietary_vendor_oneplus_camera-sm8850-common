@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
     libAncHumanRetain-jni_v2 \
     libAncHumanSegFigureFusion-jni \
     libAncHumanVideo-jni \
+    libApsAICompositionJni \
     libApsFaceBeautyPreviewProductJni \
     libApsSuperEISPreviewJni \
     libAvatarEngineRender \

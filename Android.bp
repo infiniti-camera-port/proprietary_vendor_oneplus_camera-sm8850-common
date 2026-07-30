@@ -351,6 +351,33 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libApsAICompositionJni",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libApsAICompositionJni.so",
+            ],
+            shared_libs: [
+                "libvndksupport",
+                "liblog",
+                "libandroid",
+                "libnativewindow",
+                "libdl",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libApsFaceBeautyPreviewProductJni",
     owner: "oneplus",
     strip: {
